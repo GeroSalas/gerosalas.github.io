@@ -754,6 +754,7 @@ video {
     /* Firefox 3.0 damage limitation */
     display: block;
     width: 0;
+	height: 160px;
 }
 
 
