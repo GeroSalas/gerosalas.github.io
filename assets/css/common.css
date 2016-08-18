@@ -754,9 +754,11 @@ video {
     /* Firefox 3.0 damage limitation */
     display: block;
     width: 0;
-	height: 160px;
 }
 
+div .row.services-item{
+	height: 160px;
+}
 
 .services-item{
     background: #f9f9f9;
