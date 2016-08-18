@@ -1842,6 +1842,10 @@ footer .social a{
         color: rgba(254,82,76, 1);
         color: #fff;
     }
+	
+	.navbar-custom.top-nav-collapse .navbar-brand{
+        color: #fff;
+    }
 
     .video-section{
         background: url(../images/youtube-video-cover.jpg) no-repeat bottom center scroll;
