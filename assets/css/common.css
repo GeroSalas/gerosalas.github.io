@@ -163,7 +163,11 @@ a:focus {
 }
 
 .white{
-    color:#fff;
+    color: #fff;
+}
+
+.blue{
+	color: #1b74c9;
 }
 
 .gray{
