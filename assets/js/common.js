@@ -401,6 +401,11 @@ $(function() {
                 minlength: "Minimum 10 characters",
                 maxlength: "Maximum 15 characters"
             },
+			company: {
+                required: "Please enter your company",
+                minlength: "Minimum 3 characters",
+				lettersonly: "Only letters please!"
+            },
             message: {
                 required: "Please enter your message",
                 minlength: "Minimum 6 characters"
