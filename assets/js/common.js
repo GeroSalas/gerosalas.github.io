@@ -105,6 +105,7 @@ $(function() {
 // Google map API
 $(function() {
 
+	// UBICACION OFICINA TUCUMAN
     //set your google maps parameters
     var latitude = -26.821325,
         longitude = -65.203342,
@@ -329,6 +330,7 @@ $(function() {
         map: map,
         visible: true,
         icon: marker_url,
+		title: 'ProLabs'
     });
 
     //add custom buttons for the zoom-in/zoom-out on the map
@@ -386,7 +388,7 @@ $(function() {
         },
         messages: {
             name: {
-                required: "Please enter your name",
+                required: "Please enter your ame",
                 minlength: "Minimum 3 characters",
                 lettersonly: "Only letters please!"
             },
@@ -402,9 +404,8 @@ $(function() {
                 maxlength: "Maximum 15 characters"
             },
 			company: {
-                required: "Please enter your company",
-                minlength: "Minimum 3 characters",
-				lettersonly: "Only letters please!"
+                required: "Please enter your Company name",
+                minlength: "Minimum 3 characters"
             },
             message: {
                 required: "Please enter your message",
@@ -432,7 +433,24 @@ $(function() {
                 data[name] = value;
 
             });
+			
+			// Submit Contact and SendMail through EmailJS API
+			emailjs.send("zoho","website_contact", 
+						 {name: data[name], email: data[email], phone: data[phone], company: data[company], message: data[message]} )
+			.then(function(response) {
+				$("#contactForm").before("<div class='alert alert-success' role='alert'><a href='#' class='close' data-dismiss='alert'>&times;</a>" + 'Thank you, your message has been received.' + "</div>");
+                        $(ajaxform).each(function() {
+                            this.reset();
+                            $(this).find('[name="submit"]').html('<i class="fa fa-paper-plane fa-fw"></i> Send');
+                        }).find('.valid').each(function() {
+                            $(this).remove('label.valid');
+                        })
+			}, function(err) {
+				$("#contactForm").before("<div class='alert alert-danger' role='alert'><a href='#' class='close' data-dismiss='alert'>&times;</a>" + 'Oops! Something ocurred. Sorry, please try again later.' + "</div>");
+                $(ajaxform).find('[name="submit"]').html('<i class="fa fa-paper-plane fa-fw"></i> Send');
+			});
 
+			/*
             $.ajax({
                 url: url,
                 type: type,
@@ -452,6 +470,7 @@ $(function() {
                     }
                 }
             });
+			*/
 
             return false;
         }
