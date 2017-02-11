@@ -1,8 +1,5 @@
 /*
-    Template: Hallooou HTML5 Responsive template
-    Author: Mauritius D'Silva <hello@mauritiusdsilva.com>
-    Theme URI: http://www.mauritiusdsilva.com/themes/hallooou
-    Version: 1.0
+    ProLabs Software & IT Services
 */
 
 
@@ -31,28 +28,23 @@ $(function() {
 
 // WOW.js initialise
 // WOW.js uses animate.css to animate/reveal elements.
-// Browse the list of animation effects available here-> https://daneden.github.io/animate.css/
 $(function() {
+   // default settings
     wow = new WOW({
-        boxClass: 'wow', // default
-        animateClass: 'animated', // default
-        offset: 0, // default
-        mobile: true, // default
-        live: true // default
+        boxClass: 'wow',
+        animateClass: 'animated',
+        offset: 0,
+        mobile: true,
+        live: true
     })
     wow.init();
 });
 
 
-// jQuery Parallax. More info here-> https://github.com/IanLunn/jQuery-Parallax
+// jQuery Parallax
 $(function() {
     // apply parallax effect only when body has the ".parallax-page" class
     if ($('body').hasClass('parallax-page')) {
-        //.parallax(xPosition, speedFactor, outerHeight) options:
-        //xPosition - Horizontal position of the element
-        //inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
-        //outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
-
         $('#parallax-slide').parallax("50%", 0.1);
         $('#products').parallax("50%", 0.1);
         $('#page-aboutus').parallax("50%", 0.1);
@@ -96,7 +88,7 @@ $('.toggle').click(function() {
 // Carousel Slider
 $(function() {
     $('.carousel').carousel({
-            interval: 8000 //changes the speed
+        interval: 8000  / /changes the speed
     })
 });
 
@@ -105,7 +97,7 @@ $(function() {
 // Google map API
 $(function() {
 
-	// UBICACION OFICINA TUCUMAN
+	  // UBICACION OFICINA TUCUMAN
     //set your google maps parameters
     var latitude = -26.821325,
         longitude = -65.203342,
@@ -330,7 +322,7 @@ $(function() {
         map: map,
         visible: true,
         icon: marker_url,
-		title: 'ProLabs'
+		    title: 'ProLabs'
     });
 
     //add custom buttons for the zoom-in/zoom-out on the map
@@ -367,7 +359,7 @@ $(function() {
         rules: {
             name: {
                 required: true,
-                minlength: 2,
+                minlength: 3,
                 lettersonly: true
             },
             email: {
@@ -381,6 +373,10 @@ $(function() {
                 minlength: 10,
                 maxlength: 15
             },
+            company: {
+                required: true,
+                minlength: 2
+            },
             message: {
                 required: true,
                 minlength: 6
@@ -388,24 +384,24 @@ $(function() {
         },
         messages: {
             name: {
-                required: "Please enter your ame",
+                required: "Please enter your Name",
                 minlength: "Minimum 3 characters",
                 lettersonly: "Only letters please!"
             },
             email: {
-                required: "Please enter your email address",
+                required: "Please enter your Email address",
                 minlength: "Minimum 6 characters",
                 email: "That's an invalid email"
             },
             phone: {
-                required: "Please enter your phone number",
+                required: "Please enter your Phone number",
                 digits: "Only digits (no spaces)",
                 minlength: "Minimum 10 characters",
                 maxlength: "Maximum 15 characters"
             },
-			company: {
+			      company: {
                 required: "Please enter your Company name",
-                minlength: "Minimum 3 characters"
+                minlength: "Minimum 2 characters"
             },
             message: {
                 required: "Please enter your message",
@@ -424,55 +420,31 @@ $(function() {
 
             $(ajaxform).find('[name="submit"]').html('<i class="fa fa-circle-o-notch fa-spin fa-fw"></i> Sending...');
 
-
             ajaxform.find('[name]').each(function(index, value) {
                 var field = $(this),
                     name = field.attr('name'),
                     value = field.val();
 
                 data[name] = value;
-
             });
 
-			// Submit Contact and SendMail through EmailJS API
-			emailjs.send("zoho","website_contact",
-						 {name: data[name], email: data[email], phone: data[phone], company: data[company], message: data[message]} )
-			.then(function(response) {
-				$("#contactForm").before("<div class='alert alert-success' role='alert'><a href='#' class='close' data-dismiss='alert'>&times;</a>" + 'Thank you, your message has been received.' + "</div>");
-                        $(ajaxform).each(function() {
-                            this.reset();
-                            $(this).find('[name="submit"]').html('<i class="fa fa-paper-plane fa-fw"></i> Send');
-                        }).find('.valid').each(function() {
-                            $(this).remove('label.valid');
-                        })
-			}, function(err) {
-				$("#contactForm").before("<div class='alert alert-danger' role='alert'><a href='#' class='close' data-dismiss='alert'>&times;</a>" + 'Oops! Something ocurred. Sorry, please try again later.' + "</div>");
-                $(ajaxform).find('[name="submit"]').html('<i class="fa fa-paper-plane fa-fw"></i> Send');
-			});
+      			// Submit Contact and SendMail through EmailJS API
+      			emailjs.send("gmail_prolabs","contact_website",
+      						 {name: data[name], email: data[email], phone: data[phone], company: data[company], message: data[message]} )
+      			.then(function(res) {
+      				$("#contactForm").before("<div class='alert alert-success' role='alert'><a href='#' class='close' data-dismiss='alert'>&times;</a>" + 'Thank you, your message has been received correctly!' + "</div>");
+                              $(ajaxform).each(function() {
+                                  this.reset();
+                                  $(this).find('[name="submit"]').html('<i class="fa fa-paper-plane fa-fw"></i> Send');
+                              }).find('.valid').each(function() {
+                                  $(this).remove('label.valid');
+                              })
+      			}, function(err) {
+      				      $("#contactForm").before("<div class='alert alert-danger' role='alert'><a href='#' class='close' data-dismiss='alert'>&times;</a>" + 'Oops! Something ocurred. Sorry, please try again later.' + "</div>");
+                    $(ajaxform).find('[name="submit"]').html('<i class="fa fa-paper-plane fa-fw"></i> Send');
+      			});
 
-			/*
-            $.ajax({
-                url: url,
-                type: type,
-                data: data,
-                success: function(response) {
-                    if (response.type == 'success') {
-                        $("#contactForm").before("<div class='alert alert-success' role='alert'><a href='#' class='close' data-dismiss='alert'>&times;</a>" + response.text + "</div>");
-                        $(ajaxform).each(function() {
-                            this.reset();
-                            $(this).find('[name="submit"]').html('<i class="fa fa-paper-plane fa-fw"></i> Send');
-                        }).find('.valid').each(function() {
-                            $(this).remove('label.valid');
-                        })
-                    } else if (response.type == 'error') {
-                        $("#contactForm").before("<div class='alert alert-danger' role='alert'><a href='#' class='close' data-dismiss='alert'>&times;</a>" + response.text + "</div>");
-                        $(ajaxform).find('[name="submit"]').html('<i class="fa fa-paper-plane fa-fw"></i> Send');
-                    }
-                }
-            });
-			*/
-
-            return false;
+          return false;
         }
     });
 
