@@ -355,7 +355,9 @@ $(function() {
 // Contact form
 $(function() {
     // validate contact form on keyup and submit
-    $("#contactForm").validate({
+    $("#contactForm").submit(function(e) {
+        e.preventDefault();
+    }).validate({
         rules: {
             name: {
                 required: true,
@@ -413,10 +415,8 @@ $(function() {
         },
         submitHandler: function(element) {
 
-            var ajaxform = $(element),
-                url = ajaxform.attr('action'),
-                type = ajaxform.attr('method'),
-                data = {};
+            var ajaxform = $(element);
+            var data = {};
 
             $(ajaxform).find('[name="submit"]').html('<i class="fa fa-circle-o-notch fa-spin fa-fw"></i> Sending...');
 
@@ -444,7 +444,7 @@ $(function() {
                     $(ajaxform).find('[name="submit"]').html('<i class="fa fa-paper-plane fa-fw"></i> Send');
       			});
 
-          return false;
+            return false;
         }
     });
 
