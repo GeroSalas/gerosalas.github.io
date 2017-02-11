@@ -113,7 +113,7 @@ $(function() {
 
     //google map custom marker icon - .png fallback for IE11
     var is_internetExplorer11 = navigator.userAgent.toLowerCase().indexOf('trident') > -1;
-    var marker_url = (is_internetExplorer11) ? 'assets/images/cd-icon-location.png' : 'assets/images/cd-icon-location.svg';
+    var marker_url = (is_internetExplorer11) ? '../assets/images/cd-icon-location.png' : '../assets/images/cd-icon-location.svg';
 
     //define the basic color of your map, plus a value for saturation and brightness
     var main_color = '#2d313f',
@@ -127,7 +127,7 @@ $(function() {
             stylers: [{
                 saturation: saturation_value
             }]
-        }, { //poi stands for point of interest - don't show these lables on the map 
+        }, { //poi stands for point of interest - don't show these lables on the map
             featureType: "poi",
             elementType: "labels",
             stylers: [{
@@ -324,7 +324,7 @@ $(function() {
         }
         //inizialize the map
     var map = new google.maps.Map(document.getElementById('google-container'), map_options);
-    //add a custom marker to the map                
+    //add a custom marker to the map
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng(latitude, longitude),
         map: map,
@@ -335,7 +335,7 @@ $(function() {
 
     //add custom buttons for the zoom-in/zoom-out on the map
     function CustomZoomControl(controlDiv, map) {
-        //grap the zoom elements from the DOM and insert them in the map 
+        //grap the zoom elements from the DOM and insert them in the map
         var controlUIzoomIn = document.getElementById('cd-zoom-in'),
             controlUIzoomOut = document.getElementById('cd-zoom-out');
         controlDiv.appendChild(controlUIzoomIn);
@@ -433,9 +433,9 @@ $(function() {
                 data[name] = value;
 
             });
-			
+
 			// Submit Contact and SendMail through EmailJS API
-			emailjs.send("zoho","website_contact", 
+			emailjs.send("zoho","website_contact",
 						 {name: data[name], email: data[email], phone: data[phone], company: data[company], message: data[message]} )
 			.then(function(response) {
 				$("#contactForm").before("<div class='alert alert-success' role='alert'><a href='#' class='close' data-dismiss='alert'>&times;</a>" + 'Thank you, your message has been received.' + "</div>");
