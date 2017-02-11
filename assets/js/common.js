@@ -418,7 +418,7 @@ $(function() {
 
       			// Submit Contact and SendMail through EmailJS API
       			emailjs.send("gmail_prolabs","contact_website",
-      						 {"name": data[name].toString(), "email": data[email].toString(), "phone": data[phone].toString(), "company": data[company].toString(), "message": data[message].toString()} )
+      						 {name: data.name, email: data.email, phone: data.phone, company: data.company, message: data.message} )
       			.then(function(res) {
       				$("#contactForm").before("<div class='alert alert-success' role='alert'><a href='#' class='close' data-dismiss='alert'>&times;</a>" + 'Thank you, your message has been received correctly!' + "</div>");
                               $(ajaxform).each(function() {
