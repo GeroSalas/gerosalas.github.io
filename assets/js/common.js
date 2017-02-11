@@ -369,12 +369,6 @@ $(function() {
                 minlength: 6,
                 email: true
             },
-            phone: {
-                required: true,
-                digits: true,
-                minlength: 10,
-                maxlength: 15
-            },
             company: {
                 required: true,
                 minlength: 2
@@ -394,12 +388,6 @@ $(function() {
                 required: "Please enter your Email address",
                 minlength: "Minimum 6 characters",
                 email: "That's an invalid email"
-            },
-            phone: {
-                required: "Please enter your Phone number",
-                digits: "Only digits (no spaces)",
-                minlength: "Minimum 10 characters",
-                maxlength: "Maximum 15 characters"
             },
 			      company: {
                 required: "Please enter your Company name",
