@@ -406,7 +406,7 @@ $(function() {
             var ajaxform = $(element);
             var data = {};
 
-            $(ajaxform).find('[name="submit"]').html('<i class="fa fa-circle-o-notch fa-spin fa-fw"></i> Sending...');
+            $(ajaxform).find('[name="submit"]').html('<i class="fa fa-circle-o-notch fa-spin fa-fw"></i> Sending...Please wait...').css('cursor', 'not-allowed');
 
             ajaxform.find('[name]').each(function(index, value) {
                 var field = $(this),
@@ -418,7 +418,7 @@ $(function() {
 
       			// Submit Contact and SendMail through EmailJS API
       			emailjs.send("gmail_prolabs","contact_website",
-      						 {name: data.name, email: data.email, phone: data.phone, company: data.company, message: data.message} )
+      						       {name: data.name, email: data.email, phone: data.phone, company: data.company, message: data.message} )
       			.then(function(res) {
       				$("#contactForm").before("<div class='alert alert-success' role='alert'><a href='#' class='close' data-dismiss='alert'>&times;</a>" + 'Thank you, your message has been received correctly!' + "</div>");
                               $(ajaxform).each(function() {
