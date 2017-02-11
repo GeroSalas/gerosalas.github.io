@@ -88,7 +88,7 @@ $('.toggle').click(function() {
 // Carousel Slider
 $(function() {
     $('.carousel').carousel({
-        interval: 8000  / /changes the speed
+        interval: 8000  // changes the speed
     })
 });
 
