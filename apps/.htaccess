@@ -2,4 +2,5 @@
 
 Options -Indexes
 
-ErrorDocument 403 /index.html
+ErrorDocument 404 https://prolabs.io/index.html
+ErrorDocument 403 https://prolabs.io/index.html
