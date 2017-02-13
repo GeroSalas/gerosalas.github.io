@@ -5,11 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	  <meta name="author" content="Geronimo Perez Salas">
     <meta name="description" content="Informative WebSite">
 	  <meta name="keywords" content="freelance, development, engineer, software, systems, web applications, cloud computing, big data, software outsourcing, design, ui, ux, consulting" />
 
     <title> Home | ProLabs </title>
+
+    <meta property="og:url"         content="https://prolabs.io/es/" />
+    <meta property="og:type"        content="website" />
+    <meta property="og:title"       content="ProLabs" />
+    <meta property="og:description" content="Software & IT Services" />
+    <meta property="og:image"       content="https://prolabs.io/assets/images/ProLabs_Logo_BgnWhite_V2.png" />
+    <meta property="fb:app_id"      content="1948756175353606" />
 
     <!-- Bootstrap Core CSS -->
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
@@ -43,6 +49,36 @@
         document.createElement('video');
       </script>
     <![endif]-->
+
+    <!-- Google Analytics Code -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91825811-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1948756175353606',
+          xfbml      : true,
+          version    : 'v2.8'
+        });
+        FB.AppEvents.logPageView();
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
 
 </head>
 
@@ -370,7 +406,7 @@
                     <div class="row text-center">
                         <div class="col-md-12">
                             <h2>CONTACT</h2>
-                            <h3 class="caption black">Feel free to get in touch with us if you have a new project or simply something awesome.</h3>
+                            <h3 class="caption black" style="font-family: 'Lato';">Feel free to get in touch with us if you have a new project or simply something awesome.</h3>
                         </div>
                     </div>
                 </div>
@@ -405,11 +441,11 @@
                         <div class="col-md-4 contact-address black">
                             <h3>Office address</h3>
                             <p> <i class="fa fa-map-marker"></i>&nbsp;
-								<a class="black" href="https://www.google.com/maps/place/ProLabs,+Marcos+Paz+580,+San+Miguel+de+Tucum%C3%A1n,+Tucum%C3%A1n,+Argentina/@-26.8213128,-65.2068271,962m/data=!3m1!1e3!4m11!1m5!8m4!1e4!2s100494262459990648145!3m1!1e1!3m4!1s0x94225c3d580ed283:0xe7b82206608a0fcf!8m2!3d-26.8213355!4d-65.2034045?hl=en-AR" title="Ver en Mapa" target="_blank"> Marcos Paz 580</a>
+								                <a class="black" href="https://www.google.com/maps/place/ProLabs,+Marcos+Paz+580,+San+Miguel+de+Tucum%C3%A1n,+Tucum%C3%A1n,+Argentina/@-26.8213128,-65.2068271,962m/data=!3m1!1e3!4m11!1m5!8m4!1e4!2s100494262459990648145!3m1!1e1!3m4!1s0x94225c3d580ed283:0xe7b82206608a0fcf!8m2!3d-26.8213355!4d-65.2034045?hl=en-AR" title="Ver en Mapa" target="_blank"> Marcos Paz 580</a>
                                 <br />San Miguel de Tucumán, 4000
                                 <br />Argentina</p>
                             <ul>
-                                <li><span>Email:</span> hello@prolabs.io</li>
+                                <li><span>Email:</span> hello@prolabs.io / sales@prolabs.io</li>
                                 <li><span>Phone:</span> +54 (9) 381 5570202</li>
                                 <li><span>Alternative:</span> +54 (9) 381 4778686</li>
                             </ul>
@@ -440,7 +476,7 @@
                             <p class="white">We make it better. Innovative, Creative &amp; Flexible Solutions.</p>
 							              <p class="blue">#DEVELOPMENT  #INNOVATION  #SMART  #GLOBAL  #AGILE  #TEAMWORK  #FACILITIES</p>
                             <div class="white">
-                              <a href="/en/index.html" style="color: #2f88dc;text-decoration: underline;">English</a> | <a href="/es/index.html">Spanish</a>
+                              <a href="/en/">English</a> | <a href="/es/" style="color: #2f88dc;text-decoration: underline;">Spanish</a>
                             </div>
                         </div>
                     </div>
@@ -448,7 +484,7 @@
                         <div class="col-md-12 social segment">
                             <h4>Stay Connected</h4>
                             <a href="https://www.facebook.com/prolabs.io" target="_blank"><i class="fa fa-facebook fa-3x"></i></a>
-                            <a href="https://twitter.com/prolabs.io" target="_blank"><i class="fa fa-twitter fa-3x"></i></a>
+                            <a href="https://twitter.com/ProlabsAr" target="_blank"><i class="fa fa-twitter fa-3x"></i></a>
                             <a href="https://www.linkedin.com/prolabs.io" target="_blank"><i class="fa fa-linkedin fa-3x"></i></a>
                         </div>
                     </div>

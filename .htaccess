@@ -1,0 +1,7 @@
+# Always use https for secure connections
+
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.prolabs.io/$1 [R=301,L]
+
+ErrorDocument 404 /index.html
