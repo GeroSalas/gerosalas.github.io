@@ -1169,6 +1169,9 @@ ul.project-meta{
 
 /*       5.7: Clients section
 /* ---------------------------------------------- */
+.our-proposal h2{
+    color: #fff;
+}
 
 .our-clients {
     background-color: rgba(9,113,178, 1); /* Primary color, can be changed via colors.css */
