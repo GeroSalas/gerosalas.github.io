@@ -115,8 +115,12 @@ blockquote {
 /* 4:   Secondary color */
 /* ---------------------------------------------- */
 
+.our-proposal {
+    background: #2d2d37; /* - Secondary color */
+}
+
 .our-clients {
-    background: #2d2d37; /* Secondary color */
+    background: rgba(45, 45, 55, 0.35); /* #2d2d37 - Secondary color */
 }
 
 .btn-outlined {

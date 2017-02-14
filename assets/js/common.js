@@ -84,6 +84,20 @@ $('.toggle').click(function() {
 });
 
 
+// Client testimonials
+$(function() {
+
+    var owl = $(".client-testimonials");
+
+    owl.owlCarousel({
+        navigation: false, // Show next and prev buttons
+        slideSpeed: 300,
+        paginationSpeed: 400,
+        singleItem: true
+    });
+
+});
+
 
 // Carousel Slider
 $(function() {
