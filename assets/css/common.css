@@ -895,8 +895,9 @@ div .row.services-item{
 }
 
 .team-member figcaption p{
-    font-size: 12px;
+    font-size: 15px;
     margin: 0;
+    margin-top: 30px;
 }
 
 .team-member figcaption ul{
@@ -944,7 +945,7 @@ div .row.services-item{
 .team-member figure:hover figcaption{
     visibility: visible;
     color: #fff;
-    background: rgba(230,78,62,0.9); /* Primary color, can be changed via colors.css */
+    background: rgb(44, 131, 214);
     height: 100%;
     -webkit-transition: all 0.3s ease-in-out;
        -moz-transition: all 0.3s ease-in-out;
