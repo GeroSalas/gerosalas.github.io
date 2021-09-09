@@ -1,0 +1,61 @@
+{
+  "name": "gerosalas.github.io",
+  "version": "0.1.0",
+  "private": true,
+  "author": "geronimo.perez.salas@gmail.com",
+  "description": "professional resume",
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "lint": "eslint 'src/**/*.{js,jsx}'",
+    "lint:fix": "eslint 'src/**/*.{js,jsx}' --fix",
+    "ci": "npm run lint && npm run build && npm test",
+    "release": "standard-version"
+  },
+  "dependencies": {
+    "@craco/craco": "^6.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "autoprefixer": "^9.8.6",
+    "eslint": "^7.31.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.0.1",
+    "postcss": "^7.0.36",
+    "prettier": "^2.3.2",
+    "standard-version": "^9.3.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": "14.16.0"
+  }
+}
