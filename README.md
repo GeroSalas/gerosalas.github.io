@@ -1,6 +1,6 @@
 ### Hi there 👋🏼  I am Geronimo Perez Salas!
 
-#### Check out my [personal website](https://gerosalas.github.io)
+#### Check out my [personal website](https://gerosalas.vercel.app)
 
 - 🔭 I’m currently working on Signol
 - 🌱 I’m currently learning about Crypto/Blockchain 🪙 & Machine Learning/AI 🤖
