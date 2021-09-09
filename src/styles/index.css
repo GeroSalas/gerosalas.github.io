@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:regular,bold,italic');
+@import url('https://fonts.googleapis.com/css?family=Play:regular,bold,italic');
+@import url('https://fonts.googleapis.com/css?family=Playball:regular,bold,italic');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:regular,bold,italic');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CUSTOM APP STYLES EXTENSIONS, OVERRIDES & PERSONALIZATIONS */
+@layer components {
+    body {
+        /* Testing some other cool fonts!
+        font-family: 'Source Code Pro','Playball','Play' !important;
+        */
+    }
+    .bg-primary-gradient {
+        @apply text-white bg-gradient-to-b from-primary-600 to-primary-400;
+    }
+    .bg-secondary-gradient {
+        @apply text-gray-800 bg-gradient-to-b from-secondary-600 to-secondary-400;
+    }
+    .bg-gray-gradient {
+        @apply text-gray-900 bg-gradient-to-b from-gray-200 to-gray-100;
+    }
+}
