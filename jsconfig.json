@@ -1,9 +1,0 @@
-{
-    "compilerOptions": {
-      "baseUrl": "src",
-      "paths": {
-        "images": ["src/images"]
-      }
-    },
-    "include": ["src"]
-}
